@@ -2137,6 +2137,13 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.editedIndex > -1) {
         Object.assign(this.desserts[this.editedIndex], this.editedItem);
+        axios.put('/account/' + this.editedItem.id, this.editedItem).then(function (response) {
+          if (response.status == 200 && response.data) {
+            _this3.desserts = response.data;
+          }
+        })["catch"](function (error) {
+          console.log(error);
+        });
       } else {
         this.desserts.push(this.editedItem);
         axios.post('/account', this.editedItem).then(function (response) {

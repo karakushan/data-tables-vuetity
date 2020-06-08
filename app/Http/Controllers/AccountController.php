@@ -74,7 +74,9 @@ class AccountController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $account = Account::find($id);
+        $account->fill($request->all());
+        $account->save();
     }
 
     /**
@@ -85,7 +87,7 @@ class AccountController extends Controller
      */
     public function destroy($id)
     {
-        $account=Account::find($id);
+        $account = Account::find($id);
         $account->delete();
     }
 }

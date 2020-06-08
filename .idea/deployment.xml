@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="accounts.profglobal.top">
+  <component name="PublishConfigData" serverName="accounts.profglobal.top" uploadOnCheckin="498876da-4847-4466-82db-662431834efe">
     <serverData>
       <paths name="accounts.profglobal.top">
         <serverdata>
@@ -10,5 +10,6 @@
         </serverdata>
       </paths>
     </serverData>
+    <option name="myUploadOnCheckinName" value="accounts.profglobal.top" />
   </component>
 </project>

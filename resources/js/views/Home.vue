@@ -168,6 +168,8 @@
                 this.editedIndex = this.desserts.indexOf(item)
                 this.editedItem = Object.assign({}, item)
                 this.dialog = true
+
+
             },
 
             deleteItem(item) {
@@ -203,6 +205,16 @@
             save() {
                 if (this.editedIndex > -1) {
                     Object.assign(this.desserts[this.editedIndex], this.editedItem)
+                    axios
+                        .put('/account/'+this.editedItem.id, this.editedItem)
+                        .then(response => {
+                            if (response.status == 200 && response.data) {
+                                this.desserts = response.data;
+                            }
+                        })
+                        .catch(error => {
+                            console.log(error);
+                        });
                 } else {
                     this.desserts.push(this.editedItem)
                     axios
