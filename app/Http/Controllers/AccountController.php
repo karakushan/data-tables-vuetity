@@ -85,6 +85,7 @@ class AccountController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $account=Account::find($id);
+        $account->delete();
     }
 }

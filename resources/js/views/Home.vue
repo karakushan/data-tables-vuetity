@@ -173,6 +173,21 @@
             deleteItem(item) {
                 const index = this.desserts.indexOf(item)
                 confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1)
+                 axios
+                  .delete('/account/'+item.id, {
+                  	// data
+                  })
+                  .then(response => {
+                  	console.log(response);
+                  	if (response.status == 200 && response.data) {
+                  		//
+                  	}
+                  })
+                  .catch(error => {
+                  	console.log(error);
+                  });
+
+                console.log(item);
             },
 
             close() {
@@ -180,6 +195,8 @@
                 this.$nextTick(() => {
                     this.editedItem = Object.assign({}, this.defaultItem)
                     this.editedIndex = -1
+
+
                 })
             },
 

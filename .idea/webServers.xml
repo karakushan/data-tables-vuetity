@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="498876da-4847-4466-82db-662431834efe" name="accounts.profglobal.top" url="http://accounts.profglobal.top">
+        <fileTransfer rootFolder="/web/accounts.profglobal.top/public_html" host="accounts.profglobal.top" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

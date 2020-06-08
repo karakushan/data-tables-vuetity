@@ -2112,6 +2112,16 @@ __webpack_require__.r(__webpack_exports__);
     deleteItem: function deleteItem(item) {
       var index = this.desserts.indexOf(item);
       confirm('Are you sure you want to delete this item?') && this.desserts.splice(index, 1);
+      axios["delete"]('/account/' + item.id, {// data
+      }).then(function (response) {
+        console.log(response);
+
+        if (response.status == 200 && response.data) {//
+        }
+      })["catch"](function (error) {
+        console.log(error);
+      });
+      console.log(item);
     },
     close: function close() {
       var _this2 = this;
